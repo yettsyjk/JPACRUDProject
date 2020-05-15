@@ -1,0 +1,3 @@
+rootProject.name = 'DoctorPatientCRM'
+
+includeFlat 'JPAPatient'
