@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `patient` (
   `last_name` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NULL,
   `physician_last_name` VARCHAR(45) NOT NULL,
-  `physician_speciality` VARCHAR(45) NOT NULL,
+  `physician_specialty` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -46,7 +46,10 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `patientdb`;
-INSERT INTO `patient` (`id`, `first_name`, `last_name`, `email`, `physician_last_name`, `physician_speciality`) VALUES (1, 'Laura', 'Croft', 'lcroft@gmail.com', 'Specimen', 'Surgery');
+INSERT INTO `patient` (`id`, `first_name`, `last_name`, `email`, `physician_last_name`, `physician_specialty`) VALUES (1, 'Laura', 'Croft', 'lcroft@gmail.com', 'Specimen', 'Surgery');
+INSERT INTO `patient` (`id`, `first_name`, `last_name`, `email`, `physician_last_name`, `physician_specialty`) VALUES (2, 'Rick', 'Ross', 'smile@aol.com', 'Brader', 'Internal');
+INSERT INTO `patient` (`id`, `first_name`, `last_name`, `email`, `physician_last_name`, `physician_specialty`) VALUES (3, 'Tom', 'Garcia', 'chase@yahoo.com', 'Victor', 'Orthopaedics');
+INSERT INTO `patient` (`id`, `first_name`, `last_name`, `email`, `physician_last_name`, `physician_specialty`) VALUES (4, 'Henry', 'Smith', 'bigs@gmail.com', 'Chu', 'Neurology');
 
 COMMIT;
 

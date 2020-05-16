@@ -13,6 +13,7 @@ import com.skilldistillery.patients.entities.Patient;
 @Service
 @Transactional
 public class PatientDAOImpl implements PatientDAO{
+	
 	@PersistenceContext
 	private EntityManager em;
 	
@@ -27,6 +28,13 @@ public class PatientDAOImpl implements PatientDAO{
 		
 		List<Patient> patients = em.createQuery(jpql, Patient.class).getResultList();
 		return patients;
+	}
+	
+	
+	@Override
+	public Patient addPatient(Patient patient) {
+		em.persist(patient);
+		return patient;
 	}
 	
 }

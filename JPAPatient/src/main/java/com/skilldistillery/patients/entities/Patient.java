@@ -32,7 +32,7 @@ public class Patient {
 	
 	
 	@Column(name="physician_speciality")
-	private String docSpeciality;
+	private String docSpecialty;
 
 
 	
@@ -92,20 +92,20 @@ public class Patient {
 	}
 
 
-	public String getDocSpeciality() {
-		return docSpeciality;
+	public String getdocSpecialty() {
+		return docSpecialty;
 	}
 
 
-	public void setDocSpeciality(String docSpeciality) {
-		this.docSpeciality = docSpeciality;
+	public void setdocSpecialty(String docSpecialty) {
+		this.docSpecialty = docSpecialty;
 	}
 
 
 	@Override
 	public String toString() {
 		return "Patient [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", docLastName=" + docLastName + ", docSpeciality=" + docSpeciality + "]";
+				+ ", docLastName=" + docLastName + ", docSpecialty=" + docSpecialty + "]";
 	}
 	
 	

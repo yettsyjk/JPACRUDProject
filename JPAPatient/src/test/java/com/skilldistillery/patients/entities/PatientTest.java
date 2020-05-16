@@ -51,12 +51,12 @@ class PatientTest {
 		assertEquals("lcroft@gmail.com", patient.getEmail());
 		
 		assertEquals("Specimen", patient.getDocLastName());
-		assertEquals("Surgery", patient.getDocSpeciality());
+		assertEquals("Surgery", patient.getdocSpecialty());
 	}
 
 }
 //+----+------------+-----------+------------------+---------------------+----------------------+
-//| id | first_name | last_name | email            | physician_last_name | physician_speciality |
+//| id | first_name | last_name | email            | physician_last_name | physician_specialty |
 //+----+------------+-----------+------------------+---------------------+----------------------+
 //|  1 | Laura      | Croft     | lcroft@gmail.com | Specimen            | Surgery              |
 //+----+------------+-----------+------------------+---------------------+----------------------+

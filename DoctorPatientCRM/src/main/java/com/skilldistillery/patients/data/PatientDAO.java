@@ -13,4 +13,6 @@ public interface PatientDAO {
 	
 	List<Patient> findAll();
 	
+	Patient addPatient(Patient patient);
+	
 }
