@@ -13,13 +13,12 @@
 <title>Patient CRM | Patient</title>
 </head>
 <body>
-<%--Edit the file nav.jsp to change nav links --%>
-<%@ include file="navbar.jsp" %>
-	
-	<h2 class="title">Patient Details</h2>
+	<%--Edit the file nav.jsp to change nav links --%>
+	<%@ include file="navbar.jsp"%>
 
 
 
+	<!-- List of Patients -->
 	<c:choose>
 		<c:when test="${! empty patients }">
 			<table>
@@ -39,24 +38,65 @@
 				</c:forEach>
 			</table>
 		</c:when>
-	
+		
 		<c:when test="${! empty patient }">
 			<div class="container">
-				<div class="card" style="width: 18rem;">
-					<div class="card-body">
-						<h5 class="card-title">ID: ${patient.id}</h5>
+				
+				<div class="card" style="width: 60rem;">
+					<div class="card-body d-flex flex-row">
+						<h5 class="card-title font-weight-bold mb-2">ID:
+							${patient.id}</h5>
+						<p class="card-text">
+							<i class="far fa-clock pr2"></i>FIXME DATE CREATED
+						</p>
 
 						<p class="card-text">Name: ${patient.lastName},
 							${patient.firstName}</p>
 
 						<p class="card-text">Email: ${patient.email}</p>
-						<p class="card-text">Reason For Visit:
-							${patient.docSpecialty}</p>
+						<p class="card-text">Reason For Visit: ${patient.docSpecialty}</p>
 						<p class="card-text">Doctor In Charge: ${patient.docLastName}</p>
-
 					</div>
 				</div>
 			</div>
+			
+			<h3>Update Patient Details</h3>
+			<div class="card" style="width: 40rem;">
+				<div class="card-body">
+					<form action="updatePatient.do" method="POST">
+						<label for="pid"></label> <input type="hidden"
+							value="${patient.id}" name="pid" autocomplete="off" /> <label
+							for="pid">Patient ID: </label> <input type="text"
+							value="${patient.id}" name="pid" disabled="disabled" />
+							<br>
+							
+							<label for="firstName">First Name: </label>
+							<input type="text" value="${patient.firstName}" name="firstName"/>
+							<br>
+							<label for="lastName">Last Name: </label>
+							<input type="text" value="${patient.lastName}" name="lastName"/>
+							<br>
+							<label for="email">Email: </label>
+							<input type="text" value="${patient.email}" name="email"/>
+							<br>
+							<label for="docLastName">Attending Physician: </label>
+							<input type="text" value="${patient.docLastName}" name="docLastName"/>
+							<br>
+							<input type="submit" value="Update Patient Details"/>
+					</form>
+					<form action="deletePatient.do" method="POST">
+					<label for="patientID">
+					</label>
+					<input type="hidden" value="${patient.id}" name="pid"/>
+					<br>
+					<input type="submit"  value="Appointment Complete"/>				
+					</form>
+					
+				</div>
+			</div>
+			
+
+
 		</c:when>
 
 
@@ -64,11 +104,40 @@
 			<h5>Invalid Patient Request</h5>
 		</c:otherwise>
 	</c:choose>
+	<br>
+	<!-- Map for Patient Guidance to Office-->
+	<!-- Card -->
+	<div class="card map-card">
 
+		<!--Google map-->
+		<div id="map-container-google-1" class="z-depth-1-half map-container"
+			style="height: 60rem">
+			<iframe
+				src="https://maps.google.com/maps?q=denver&t=&z=13&ie=UTF8&iwloc=&output=embed"
+				frameborder="0" style="border: 0" allowfullscreen></iframe>
+		</div>
 
+		<!-- Card content -->
+		<div class="card-body closed px-0">
 
-	<br />
-	<a href="index.do" class="btn btn-warning">Home</a>
+			<div class="button px-2 mt-3">
+				<a class="btn-floating btn-lg living-coral float-right"><i
+					class="fas fa-bicycle"></i></a>
+			</div>
+
+			<div class="white px-4 pb-4 pt-3-5">
+
+				<!-- Title -->
+				<h5 class="card-title h5 living-coral-text">Denver, CO</h5>
+
+				<div class="d-flex justify-content-between living-coral-text">
+					<h6 class="card-subtitle font-weight-light">Guide Patient to
+						Hospital</h6>
+					<h6 class="font-small font-weight-light mt-n1">25 min</h6>
+				</div>
+			</div>
+
+			<br /> <a href="index.do" class="btn btn-warning">Home</a>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

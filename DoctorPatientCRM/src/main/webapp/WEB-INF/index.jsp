@@ -37,7 +37,7 @@
 			</form>
 		</div>
 		</div>
-		<br/>
+		<br>
 		
 		<div class="card" style="width: 25rem;">
 		<div class="card-body">
@@ -48,6 +48,33 @@
 		</div>
 	</div>
 	<br>
+	<!-- Map for Patient Guidance to Office-->
+<!-- Card -->
+<div class="card map-card">
+
+  <!--Google map-->
+  <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 60rem">
+    <iframe src="https://maps.google.com/maps?q=denver&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+      style="border:0" allowfullscreen></iframe>
+  </div>
+
+  <!-- Card content -->
+  <div class="card-body closed px-0">
+
+    <div class="button px-2 mt-3">
+      <a class="btn-floating btn-lg living-coral float-right"><i class="fas fa-bicycle"></i></a>
+    </div>
+
+    <div class="white px-4 pb-4 pt-3-5">
+
+      <!-- Title -->
+      <h5 class="card-title h5 living-coral-text">Denver, CO</h5>
+
+      <div class="d-flex justify-content-between living-coral-text">
+        <h6 class="card-subtitle font-weight-light">Guide Patient to Hospital</h6>
+        <h6 class="font-small font-weight-light mt-n1">25 min</h6>
+      </div>
+      <br>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>

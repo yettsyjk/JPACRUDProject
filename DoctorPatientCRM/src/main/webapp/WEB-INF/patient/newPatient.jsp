@@ -13,10 +13,12 @@
 <body>
 	<%--Edit the file nav.jsp to change nav links --%>
 	<%@ include file="navbar.jsp"%>
-	
+	  <br>
+	<!-- Patient Card -->
 	<div class="container">
-		<div class="card">
-			<h5 class="card-header info-color white-text text-center py-4">
+		<div class="card promoting-card">
+		<!-- Card content -->
+			<h5 class="card-header d-flex flex-row info-color dark-text text-center py-4">
 				<strong>Add New Patient</strong>
 			</h5>
 			<!-- Form -->
