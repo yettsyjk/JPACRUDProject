@@ -11,37 +11,48 @@
 	crossorigin="anonymous">
 </head>
 <body>
+	<%--Edit the file nav.jsp to change nav links --%>
+	<%@ include file="navbar.jsp"%>
+	
 	<div class="container">
 		<div class="card">
-		<h5 class="card-header info-color white-text text-center py-4"><strong>Add New Patient</strong></h5>
+			<h5 class="card-header info-color white-text text-center py-4">
+				<strong>Add New Patient</strong>
+			</h5>
 			<!-- Form -->
-			<form class="text-center" style="color: #757575;" action="newPatient.do" method="POST">
-			<div class="md-form mt-3">
-			<label for="firstName">First Name:</label>
-			<input class="form-control" type="text" name="firstName" />
-			</div>
-			<br/>
-			<div class="md-form mt-3">
-			<label for="lastName">Last Name:</label>
-			<input class="form-control" type="text" name="lastName" />
-			</div>
-			<br/>
-			<div class="md-form mt-3">
-			<label for="email">Email:</label>
-			<input class="form-control" type="text" name="email" />
-			</div>
-			<br/>
-			<div class="md-form mt-3">
-			<label for="docLastName">Attending Physician:</label>
-			<input class="form-control" type="text" name="docLastName" />
-			</div>
-			<br/>
-			<div class="md-form mt-3">
-			<label for="docSpecialty">Physician Specialty:</label>
-			<input class="form-control" type="text" name="docSpecialty" />
-			</div>
-			<br/>
-			</form>	
+			<form class="text-center" style="color: #757575;"
+				action="newPatient.do" method="POST">
+				<div class="md-form mt-3">
+					<label for="firstName">First Name:</label> <input
+						class="form-control" type="text" name="firstName" />
+				</div>
+				<br>
+				<div class="md-form mt-3">
+					<label for="lastName">Last Name:</label> <input
+						class="form-control" type="text" name="lastName"
+						autocomplete="off" />
+				</div>
+			<br>
+				<div class="md-form mt-3">
+					<label for="email">Email:</label> <input class="form-control"
+						type="text" name="email" autocomplete="off" />
+				</div>
+				<br>
+				<div class="md-form mt-3">
+					<label for="docLastName">Attending Physician:</label> <input
+						class="form-control" type="text" name="docLastName"
+						autocomplete="off" />
+				</div>
+				<br>
+				<div class="md-form mt-3">
+					<label for="docSpecialty">Physician Specialty:</label> <input
+						class="form-control" type="text" name="docSpecialty"
+						autocomplete="off" />
+				</div>
+				<br>
+				 <input type="submit" value="Add Patient" />
+
+			</form>
 		</div>
 		<a href="index.do">Home</a>
 	</div>

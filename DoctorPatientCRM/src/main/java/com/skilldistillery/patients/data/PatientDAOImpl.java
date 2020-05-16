@@ -37,4 +37,16 @@ public class PatientDAOImpl implements PatientDAO{
 		return patient;
 	}
 	
+	@Override
+	public List<Patient> listOfPatientByLastName(String lastName){
+		return em.createQuery("SELECT p FROM Patient p WHERE p.lastName= :lastName", Patient.class)
+				.setParameter("lastName", lastName)
+				.getResultList();
+	}
+	
+	@Override
+	public List<Patient> listOfAllPatients(){
+		return em.createQuery("SELECT p FROM Patient p", Patient.class).getResultList();
+	}
+	
 }

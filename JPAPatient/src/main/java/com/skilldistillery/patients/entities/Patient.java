@@ -31,7 +31,7 @@ public class Patient {
 	private String docLastName;
 	
 	
-	@Column(name="physician_speciality")
+	@Column(name="physician_specialty")
 	private String docSpecialty;
 
 

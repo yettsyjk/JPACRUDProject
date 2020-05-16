@@ -15,4 +15,7 @@ public interface PatientDAO {
 	
 	Patient addPatient(Patient patient);
 	
+	List<Patient> listOfPatientByLastName(String lastName);
+	
+	List<Patient> listOfAllPatients();
 }

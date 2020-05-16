@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
-	
-	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,29 +14,40 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<h3 class="card-title">Welcome to Doctor Patient CRM</h3>
-	<div class="card">
+<%--Edit the file nav.jsp to change nav links --%>
+<%@ include file="patient/navbar.jsp" %>
+	<h3 class="title">Welcome to Doctor Patient CRM</h3>
+	<div class="card" style="width: 25rem;">
 		<div class="card-body">
 			<form action="getPatient.do" method="GET">
-				<label class="col-sm-2 col-form-label">Patient ID:</label> <input
-					class="form-control" type="text" name="pid" /> <input
-					type="submit" value="Show Patient" />
+				<label>Patient ID:</label> <input
+					class="form-control" type="text" name="pid" autocomplete="off"/> <input
+					type="submit" value="Show Patient" autocomplete="off"/>
 			</form>
 		</div>
 	</div>
+	
+	
+	<br> 
+	<div class="card" style="width: 25rem;">
+		<div class="card-body">
+			<form action="newPatient.do" method="GET">
+				 <input
+					type="submit" value="Add New Patient" autocomplete="off"/>
+			</form>
+		</div>
+		</div>
+		<br/>
+		
+		<div class="card" style="width: 25rem;">
+		<div class="card-body">
+			<form action="listPatients.do" method="GET">
+				 <input
+					type="submit" value="List of Patients" autocomplete="off"/>
+			</form>
+		</div>
 	</div>
-	<br/>
-	
-	<table>
-	<c:forEach var="patient" items="${patient}">
-		<tr>
-		<td>${patient.id }</td>
-		<td><a class="list-group-item list-group-item-secondary" href="getPatient.do?fid=${patient.id}">${patient.title}</a></td>
-	</tr>
-	</c:forEach>
-	</table>
-	
-
+	<br>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>

@@ -1,5 +1,7 @@
 package com.skilldistillery.patients.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,21 +20,23 @@ public class PatientController {
 	private PatientDAO dao;
 	
 	
-	@RequestMapping(path= {"/", "home.do"})
+	@RequestMapping(path= {"/", "index.do"})
 	public String index() {
 		return "index";
 	}
 	
 	
-	@RequestMapping(path= "error.do")
-	public String errorPage() {
-		return "error";
-	}
+//	@RequestMapping(path= "error.do", method=RequestMethod.GET)
+//	public String errorPage() {
+//		return "patient/error";
+//	}
 	
 	
 	
-	@RequestMapping(path="getPatient.do")
+	@RequestMapping(path="getPatient.do")//should pid be String instead of Integer..need clarification
 	public String findPatient(@RequestParam("pid") Integer pid, Model model) {
+		//if pid is empty return index
+		//else make Integer id
 		Patient patient = dao.findById(pid);
 		model.addAttribute("patient", patient);
 		return "patient/show";
@@ -52,6 +56,13 @@ public class PatientController {
 		return "patient/show";
 	}
 	
+	@RequestMapping(path="listPatients.do", method=RequestMethod.GET)
+	public String listOfPatients(Model model){
+		List<Patient> patients = dao.listOfAllPatients();
+		
+		model.addAttribute("patients", patients);
+		return "patient/show";
+	}
 	
 	
 	
