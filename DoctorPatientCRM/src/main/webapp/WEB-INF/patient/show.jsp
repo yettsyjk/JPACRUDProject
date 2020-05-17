@@ -20,9 +20,13 @@
 	<%--Edit the file nav.jsp to change nav links --%>
 	<%@ include file="navbar.jsp"%>
 	<br>
+	<br>
+	<br>
+	<br>
 	<div class="container-fluid">
 	<c:choose>
 		<c:when test="${! empty patients }">
+		<div class="container">
 			<table>
 
 				<tr>
@@ -40,31 +44,43 @@
 					</tr>
 				</c:forEach>
 			</table>
+			</div>
 		</c:when>
 	
 		<c:when test="${! empty patient }">
 			<div class="container">
-				<div class="card-columns">
-				<div class="card" style="width: 150px;">
+				<div class="card promoting-card">
+				
 					<div class="card-body">
-						<h5 class="card-title font-weight-bold mb-2">ID:
-							${patient.id}</h5>
+						<img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+					<div>
+						<h4 class="card-title font-weight-bold mb-2">ID:
+							${patient.id}</h4>
 						<p class="card-text">
-							<i class="far fa-clock pr2"></i>FIXME DATE CREATED
+							<i class="far fa-clock pr-2"></i>Last Updated: ${patient.lastUpdated}
 						</p>
-
+					</div>
+					</div>
+					<div class="card-body">
+					<div class="collapse-content">
 						<p class="card-text">Name: ${patient.lastName},
 							${patient.firstName}</p>
-
+							<br>
 						<p class="card-text">Email: ${patient.email}</p>
+						
 						<p class="card-text">Reason For Visit: ${patient.docSpecialty}</p>
+						
 						<p class="card-text">Doctor In Charge: ${patient.docLastName}</p>
+						
+						
+						</div>
+						</div>
 					</div>
-				</div>
-			</div>
 		</div>
-			<h3>Update Patient Details</h3>
+	</div>
+		<div class="container">
 			<div class="card" style="width: 50rem;">
+			<h3>Update Patient Details</h3>
 				<div class="card-body">
 					<form action="updatePatient.do" method="POST">
 						<label for="pid"></label> <input type="hidden"
@@ -82,13 +98,18 @@
 							type="text" value="${patient.docLastName}" name="docLastName" />
 						<br> <label for="docSpecialty">Specialty: </label> <input
 							type="text" value="${patient.docSpecialty}" name="docSpecialty" />
-						<br> <input type="submit" value="Update Patient Details" />
+						<br>
+						 <input type="submit" value="Update Patient Details" />
 					</form>
+					</div>
+					<br>
+					<div class="container">
 					<form action="deletePatient.do" method="POST">
 						<label for="id"> </label> <input type="hidden"
 							value="${patient.id}" name="id" /> <br> <input
 							type="submit" value="Appointment Complete" />
 					</form>
+					</div>
 				</div>
 			</div>
 		</c:when>

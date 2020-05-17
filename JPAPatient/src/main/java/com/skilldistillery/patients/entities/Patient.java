@@ -34,8 +34,11 @@ public class Patient {
 	@Column(name="physician_specialty")
 	private String docSpecialty;
 
+	@Column(name="created_at")
+	private String dateCreated;
 
-	
+	@Column(name="last_updated")
+	private String lastUpdated;
 	
 	/////
 	
@@ -102,11 +105,25 @@ public class Patient {
 	}
 
 
+	public String getDateCreated() {
+		return dateCreated;
+	}
+	public void setDateCreated(String dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+	public String getLastUpdated() {
+		return lastUpdated;
+	}
+	public void setLastUpdated(String lastUpdated) {
+		this.lastUpdated = lastUpdated;
+	}
 	@Override
 	public String toString() {
 		return "Patient [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-				+ ", docLastName=" + docLastName + ", docSpecialty=" + docSpecialty + "]";
+				+ ", docLastName=" + docLastName + ", docSpecialty=" + docSpecialty + ", dateCreated=" + dateCreated
+				+ ", lastUpdated=" + lastUpdated + "]";
 	}
+	
 	
 	
 }

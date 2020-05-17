@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,36 +20,38 @@
 	<%@ include file="navbar.jsp"%>
 	<br>
 	<div class="container-fluid">
-	<c:choose>
-		<c:when test="${! empty patients }">
-			<table class="table table-borderless">
-	<tbody>
-				<tr>
-					<th scope="row" class="px-0 pb-3 pt-2">List of Patients</th>
-				</tr>
+		<c:choose>
+			<c:when test="${! empty patients }">
+				<div class="container">
+					<table class="table table-borderless">
+						<tbody>
+							<tr>
+								<th scope="row" class="px-0 pb-3 pt-2">List of Patients</th>
+							</tr>
 
-				<c:forEach var="patient" items="${patients}">
-					<tr class="mt-2">
-						<td class="pb-3 pt-2">Doctor: ${patient.docLastName }</td>
-						<td class="pb-3 pt-2">Patient ID: ${patient.id }</td>
-						<td class="pb-3 pt-2">Patient: <a
-							class="list-group-item list-group-item-secondary"
-							href="getPatient.do?pid=${patient.id}">${patient.lastName},
-								${patient.firstName}</a></td>
-						
-					</tr>
-					</tbody>
-				</c:forEach>
-			</table>
-		</c:when>
-	<c:otherwise>
-			<h5>Invalid Doctor List</h5>
-		</c:otherwise>
-	</c:choose>
+							<c:forEach var="patient" items="${patients}">
+								<tr class="mt-2">
+									<td class="pb-3 pt-2">Doctor: ${patient.docLastName }</td>
+									<td class="pb-3 pt-2">Patient ID: ${patient.id }</td>
+									<td class="pb-3 pt-2">Patient: <a
+										class="list-group-item list-group-item-secondary"
+										href="getPatient.do?pid=${patient.id}">${patient.lastName},
+											${patient.firstName}</a></td>
+
+								</tr>
+						</tbody>
+						</c:forEach>
+					</table>
+					</div>
+			</c:when>
+			<c:otherwise>
+				<h5>Invalid Doctor List</h5>
+			</c:otherwise>
+		</c:choose>
 	</div>
 	<br>
 	<div class="container">
-	<a href="index.do" class="btn btn-warning">Home</a>
+		<a href="index.do" class="btn btn-warning">Home</a>
 	</div>
 	<%@ include file="footer.jsp"%>
 	<br>

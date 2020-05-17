@@ -22,7 +22,7 @@
 	<br>
 	<h3 class="title">Arium Medical Center | Patient CRM</h3>
 	<br>
-	<div class="container-fluid">
+	<div class="container">
 	<div class="card" style="width: 25rem;">
 		<div class="card-body">
 			<form action="newPatient.do" method="GET">

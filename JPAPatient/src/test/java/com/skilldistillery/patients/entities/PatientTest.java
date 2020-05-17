@@ -44,19 +44,28 @@ class PatientTest {
 
 	@Test
 	@DisplayName("mapping for Patient")
-	void test() {
+	void test1() {
 		assertNotNull(patient);
 		assertEquals("Laura", patient.getFirstName());
 		assertEquals("Croft", patient.getLastName());
 		assertEquals("lcroft@gmail.com", patient.getEmail());
 		
-		assertEquals("Specimen", patient.getDocLastName());
+		assertEquals("Spacemen", patient.getDocLastName());
 		assertEquals("Surgery", patient.getdocSpecialty());
+		
+	}
+	
+	@Test
+	@DisplayName("Date Testing")
+	void test2() {
+		assertNotNull(patient);
+		//2020-05-16 20:05:10
+				assertEquals("2020-05-16 20:05:10", patient.getDateCreated());
+				assertEquals("2020-05-17 20:05:10", patient.getLastUpdated());
 	}
 
 }
-//+----+------------+-----------+------------------+---------------------+----------------------+
-//| id | first_name | last_name | email            | physician_last_name | physician_specialty |
-//+----+------------+-----------+------------------+---------------------+----------------------+
-//|  1 | Laura      | Croft     | lcroft@gmail.com | Specimen            | Surgery              |
-//+----+------------+-----------+------------------+---------------------+----------------------+
+//+----+------------+-----------+---------------------+---------------------+---------------------+---------------------+---------------------+
+//| id | first_name | last_name | email               | physician_last_name | physician_specialty | created_at          | last_updated        |
+//+----+------------+-----------+---------------------+---------------------+---------------------+---------------------+---------------------+
+//|  1 | Laura      | Croft     | lcroft@gmail.com    | Spacemen            | Surgery             | 2020-05-16 20:05:10 | 2020-05-17 20:05:10 |

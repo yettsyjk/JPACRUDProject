@@ -3,6 +3,7 @@
 - Perform simple CRUD on a single table database of my choosing. Table maintained on mySQL Workbench.
 - Software developer Yettsy Jo Knapp. Denver, CO May 2020 	:computer:
 - Timeline: Friday, Saturday, and Sunday
+![EER Diagram](https://)
 
 ## Reason for application:
 - :man_health_worker: Helping Patients Feel Heard
@@ -40,6 +41,21 @@
 ## MVP+
 - create user login page
 - client side styling
+
+## Technologies Used:
+- SpringToolSuite4
+- JUnit Test
+- Java Version 1.8
+- mySQL, mySQL Workbench, and SQL
+- Spring Boot, Hibernate, Gradle, JSP
+- Bootstrap, HTML, CSS
+- Git and Github for version control
+- Zoom
+
+
+
+
+
 
 __________________________________________
 - As the public loses trust in healthcare, there is a way to gain the public's trust.

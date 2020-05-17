@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,19 +15,19 @@
 	sizes="32X32" type="image/png">
 </head>
 <body>
-<%--Edit the file nav.jsp to change nav links --%>
+	<%--Edit the file nav.jsp to change nav links --%>
 	<%@ include file="navbar.jsp"%>
 	<br>
-	<div class="container-fluid">
+	<div class="container">
 		<c:if test="${! empty appointmentComplete}">
 			<h3>Appointment Complete</h3>
 			${appointmentComplete}
-</c:if>
+	</c:if>
 
 	</div>
-<br>
+	<br>
 	<div class="container">
-	<a href="index.do" class="btn btn-warning">Home</a>
+		<a href="index.do" class="btn btn-warning">Home</a>
 	</div>
 	<%@ include file="footer.jsp"%>
 	<br>
