@@ -32,7 +32,7 @@
 						<td>ID: ${patient.id }</td>
 						<td>Patient: <a
 							class="list-group-item list-group-item-secondary"
-							href="getPatient.do?pid=${patient.id}">${patient.lastName},${patient.firstName}</a></td>
+							href="getPatient.do?pid=${patient.id}">${patient.lastName}, ${patient.firstName}</a></td>
 						<td>Doctor: ${patient.docLastName }</td>
 					</tr>
 				</c:forEach>
@@ -42,8 +42,8 @@
 		<c:when test="${! empty patient }">
 			<div class="container">
 				
-				<div class="card" style="width: 60rem;">
-					<div class="card-body d-flex flex-row">
+				<div class="card" style="width: 50rem;">
+					<div class="card-body">
 						<h5 class="card-title font-weight-bold mb-2">ID:
 							${patient.id}</h5>
 						<p class="card-text">
@@ -61,13 +61,13 @@
 			</div>
 			
 			<h3>Update Patient Details</h3>
-			<div class="card" style="width: 40rem;">
+			<div class="card" style="width: 50rem;">
 				<div class="card-body">
 					<form action="updatePatient.do" method="POST">
 						<label for="pid"></label> <input type="hidden"
-							value="${patient.id}" name="pid" autocomplete="off" /> <label
+							value="${patient.id}" name="id" autocomplete="off" /> <label
 							for="pid">Patient ID: </label> <input type="text"
-							value="${patient.id}" name="pid" disabled="disabled" />
+							value="${patient.id}" name="id" disabled="disabled" />
 							<br>
 							
 							<label for="firstName">First Name: </label>
@@ -82,14 +82,17 @@
 							<label for="docLastName">Attending Physician: </label>
 							<input type="text" value="${patient.docLastName}" name="docLastName"/>
 							<br>
+							<label for="docSpecialty">Specialty: </label>
+							<input type="text" value="${patient.docSpecialty}" name="docSpecialty"/>
+							<br>
 							<input type="submit" value="Update Patient Details"/>
 					</form>
 					<form action="deletePatient.do" method="POST">
-					<label for="patientID">
+					<label for="id">
 					</label>
-					<input type="hidden" value="${patient.id}" name="pid"/>
+					<input type="hidden" value="${patient.id}" name="id"/>
 					<br>
-					<input type="submit"  value="Appointment Complete"/>				
+					<input type="submit" value="Appointment Complete"/>				
 					</form>
 					
 				</div>
@@ -101,17 +104,16 @@
 
 
 		<c:otherwise>
-			<h5>Invalid Patient Request</h5>
+			<h5>Patient Appointment Completed</h5>
 		</c:otherwise>
 	</c:choose>
 	<br>
-	<!-- Map for Patient Guidance to Office-->
-	<!-- Card -->
+	
 	<div class="card map-card">
 
 		<!--Google map-->
 		<div id="map-container-google-1" class="z-depth-1-half map-container"
-			style="height: 60rem">
+			style="height: 50rem">
 			<iframe
 				src="https://maps.google.com/maps?q=denver&t=&z=13&ie=UTF8&iwloc=&output=embed"
 				frameborder="0" style="border: 0" allowfullscreen></iframe>
@@ -133,7 +135,7 @@
 				<div class="d-flex justify-content-between living-coral-text">
 					<h6 class="card-subtitle font-weight-light">Guide Patient to
 						Hospital</h6>
-					<h6 class="font-small font-weight-light mt-n1">25 min</h6>
+					<h6 class="font-small font-weight-light mt-n1">Stay 25 min</h6>
 				</div>
 			</div>
 

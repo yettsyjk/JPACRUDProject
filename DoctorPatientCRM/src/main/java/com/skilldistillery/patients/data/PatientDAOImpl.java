@@ -68,7 +68,7 @@ public class PatientDAOImpl implements PatientDAO{
 
 	///////DELETE METHOD////////
 	@Override
-	public boolean appointmentComplete(int id) {
+	public boolean appointmentComplete(int id) {//
 		Patient patient = em.find(Patient.class, id);
 		em.remove(patient);
 		return (em.find(Patient.class, id) == null);

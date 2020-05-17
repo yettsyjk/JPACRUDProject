@@ -28,15 +28,24 @@ public class PatientController {
 //		return "patient/error";
 //	}
 
-	@RequestMapping(path = "getPatient.do", method=RequestMethod.GET) // should pid be String instead of Integer..need clarification
-	public String findPatientDetails(@RequestParam("pid") Integer pid, Model model) {
-			
-		
-			Patient patient = dao.findById(pid);
+	@RequestMapping(path = "getPatient.do", method = RequestMethod.GET) // should pid be String instead of Integer..need
+																		// clarification
+	public String findPatientDetails(@RequestParam("pid") String pid, Model model) {
+		if (pid.isEmpty()) {
+			return "index";
+		} else {
+			Integer id;
+			try {
+				id = Integer.parseInt(pid);
+			} catch (NumberFormatException e) {
+				return "index";
+			}
+
+			Patient patient = dao.findById(id);
 
 			model.addAttribute("patient", patient);
 			return "patient/show";
-		
+		}
 	}
 
 	@RequestMapping(path = "newPatient.do", method = RequestMethod.GET)
@@ -52,6 +61,17 @@ public class PatientController {
 		return "patient/show";
 	}
 
+	@RequestMapping(path = "getPatientByLastName.do", method = RequestMethod.GET)
+	public String showPatientByLastName(Model model, String lastName) {
+		if (lastName.isEmpty()) {
+			return "index";
+		} else {
+			List<Patient> patients = dao.listOfPatientByLastName(lastName);
+			model.addAttribute("patients", patients);
+			return "patient/show";
+		}
+	}
+
 	@RequestMapping(path = "listPatients.do", method = RequestMethod.GET)
 	public String listOfPatients(Model model) {
 		List<Patient> patients = dao.listOfAllPatients();
@@ -60,4 +80,23 @@ public class PatientController {
 		return "patient/show";
 	}
 
+//////UPDATE/////
+	@RequestMapping(path = "updatePatient.do", method = RequestMethod.POST)
+	public String updatePatient(Model model, Patient patient) {
+		Patient updatedPatient = dao.updatePatientInfo(patient);
+		model.addAttribute("patient", updatedPatient);
+
+		return "patient/show";
+	}
+
+//////DELETE/////
+	@RequestMapping(path = "deletePatient.do", method = RequestMethod.POST)
+	public String appointmentComplete(Model model, int id) {
+		if (dao.appointmentComplete(id)) {
+			return "patient/show";
+		} else {
+			model.addAttribute("patient", dao.findById(id));
+			return "patient/show";
+		}
+	}
 }

@@ -19,6 +19,8 @@
 1. JUnit Jupiter: coursw introduction JUnit 4 weeks ago and now applying JUnit for every entity
 1. CREATE READ UPDATE DELETE operations
 1. Bootstrap CSS for front-end: This course is heavy back-end and for that reason I leaned on Bootstrap CSS library to make a decent front-end for client.
+## Fun Times
+``java.lang.IllegalStateException: Optional int parameter 'id' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.``
 
 ## User Stories MVP
 ## User Story 1:

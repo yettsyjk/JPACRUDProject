@@ -17,11 +17,11 @@
 	<!-- Patient Card -->
 	<div class="container">
 		<div class="card promoting-card">
-		<!-- Card content -->
+		
 			<h5 class="card-header d-flex flex-row info-color dark-text text-center py-4">
 				<strong>Add New Patient</strong>
 			</h5>
-			<!-- Form -->
+			
 			<form class="text-center" style="color: #757575;"
 				action="newPatient.do" method="POST">
 				<div class="md-form mt-3">
