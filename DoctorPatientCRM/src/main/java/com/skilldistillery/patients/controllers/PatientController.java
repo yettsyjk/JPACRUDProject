@@ -23,16 +23,17 @@ public class PatientController {
 		return "index";
 	}
 
-//	@RequestMapping(path= "error.do")
-//	public String errorPage() {
-//		return "patient/error";
-//	}
+	@RequestMapping(path= "error.do")
+	public String errorPage(@RequestParam("error") Model model) {
+		model.addAttribute("oops", "Check Patient Id Entry");
+		return "patient/error";
+	}
 
 	@RequestMapping(path = "getPatient.do", method = RequestMethod.GET) // should pid be String instead of Integer..need
 																		// clarification
 	public String findPatientDetails(@RequestParam("pid") String pid, Model model) {
 		if (pid.isEmpty()) {
-			return "index";
+			return "patient/error";
 		} else {
 			Integer id;
 			try {
@@ -101,7 +102,8 @@ public class PatientController {
 	@RequestMapping(path = "deletePatient.do", method = RequestMethod.POST)
 	public String appointmentComplete(Model model, int id) {
 		if (dao.appointmentComplete(id)) {
-			return "patient/show";
+			model.addAttribute("appointmentComplete", "Successful delete");
+			return "patient/appointmentComplete";
 		} else {
 			model.addAttribute("patient", dao.findById(id));
 			return "patient/show";

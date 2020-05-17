@@ -59,7 +59,9 @@
 
 			</form>
 		</div>
-		<a href="index.do">Home</a>
+	</div>
+	<div class="container">
+	<a href="index.do" class="btn btn-warning">Home</a>
 	</div>
 
 	<%@ include file="footer.jsp"%>

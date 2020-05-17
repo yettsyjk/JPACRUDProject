@@ -14,11 +14,12 @@
 ### Main Lessons Learned
 1. Database MySQL: Mapping entities to SQL tables
 1. Spring Tool Suite4 JPA using JPQL: Creating Spring Model View Controller project to JPA project
-1. Spring Tool Suite4 Spring Boot Project:
-1. Remote learning due to COVID course decision to stay remote:
-1. JUnit Jupiter: coursw introduction JUnit 4 weeks ago and now applying JUnit for every entity
-1. CREATE READ UPDATE DELETE operations
-1. Bootstrap CSS for front-end: This course is heavy back-end and for that reason I leaned on Bootstrap CSS library to make a decent front-end for client.
+1. Spring Tool Suite4 Spring Boot Project: Having the controller makes the Spring Boot Not so front-end. However, not sure how to have the client see java server pages.(My thought process) Perhaps reviewing documentation to answer if jsp can be seen from the JPA side. hmm.
+1. Remote learning due to COVID course decision to stay remote: certainly has been a struggle. Not sure what questions to ask. However, our cohort is asking questions that get some wheels spinning.
+1. JUnit Jupiter: course introduction JUnit testing 4 weeks ago or so and now re-emphasizing JUnit testing and test driven development for the only entity (Patient.java).
+1. CREATE READ UPDATE DELETE operations. Yikes.
+1. Bootstrap CSS for front-end: This course is heavy back-end and for that reason I leaned on Bootstrap CSS library to make an alright front-end for client. I can certainly spend more time understanding grids and containers within Bootstrap or other CSS libraries.
+
 ## Fun Times
 ``java.lang.IllegalStateException: Optional int parameter 'id' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.``
 
@@ -34,13 +35,14 @@
 
 ## User Story 4:
 - Your project and database are deployed to your AWS instance.
+- My laptop tanked almost two weeks ago and I'm using a loaner so I don't think I can reach this story.
 
 ## MVP+
 - create user login page
 - client side styling
 
 __________________________________________
-- [As the public losses trust in healthcare, there is a way to gain the public's trust.]
+- As the public loses trust in healthcare, there is a way to gain the public's trust.
 (https://www.physiciansweekly.com/doctors-losing-publics-trust/)
 
 ## Connect with [Yettsy Jo Knapp](https://www.linkedin.com/in/yettsy-jo-knapp)
