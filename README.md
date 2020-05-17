@@ -3,9 +3,9 @@
 - Perform simple CRUD on a single table database of my choosing. Table maintained on mySQL Workbench.
 - Software developer Yettsy Jo Knapp. Denver, CO May 2020 	:computer:
 - Timeline: Friday, Saturday, and Sunday
-![EER Diagram](https://)
+![EER Diagram](hhttps://github.com/yettsyjk/JPACRUDProject/blob/master/DB/patient.png?raw=true)
 
-## Reason for application:
+## Reason for this application:
 - :man_health_worker: Helping Patients Feel Heard
 :woman_health_worker:
 :health_worker:
@@ -13,7 +13,7 @@
 
 
 ### Main Lessons Learned
-1. Database MySQL: Mapping entities to SQL tables
+1. Database MySQL: Mapping entities to SQL one table
 1. Spring Tool Suite4 JPA using JPQL: Creating Spring Model View Controller project to JPA project
 1. Spring Tool Suite4 Spring Boot Project: Having the controller makes the Spring Boot Not so front-end. However, not sure how to have the client see java server pages.(My thought process) Perhaps reviewing documentation to answer if jsp can be seen from the JPA side. hmm.
 1. Remote learning due to COVID course decision to stay remote: certainly has been a struggle. Not sure what questions to ask. However, our cohort is asking questions that get some wheels spinning.
@@ -50,7 +50,7 @@
 - Spring Boot, Hibernate, Gradle, JSP
 - Bootstrap, HTML, CSS
 - Git and Github for version control
-- Zoom
+- Zoom, Slack
 
 
 
