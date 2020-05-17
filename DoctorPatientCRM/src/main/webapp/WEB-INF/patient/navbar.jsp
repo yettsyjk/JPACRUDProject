@@ -16,7 +16,7 @@
 		alt="greek symbol for healthcare" 
 		style="width: 45px; height: 45px;">
 		 <br>
-		 	<a class="navbar-brand" href="index.do">Resume</a>
+		 	<a class="navbar-brand" href="https://drive.google.com/file/d/1UjyVgupUfbveo_hPkTtuGgdV81vyV3Hw/view" target="_blank">Contact Us</a>
 		<c:choose>
 
 
