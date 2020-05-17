@@ -19,6 +19,8 @@ public interface PatientDAO {
 	
 	List<Patient> listOfAllPatients();
 	
+	
+	
 	Patient updatePatientInfo(Patient patient);
 	
 	boolean appointmentComplete(int id);//delete method

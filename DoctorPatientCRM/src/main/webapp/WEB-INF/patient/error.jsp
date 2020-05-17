@@ -11,16 +11,18 @@
 	crossorigin="anonymous">
 </head>
 <body>
- <div class="container">
-<%--Edit the file nav.jsp to change nav links --%>
-<%@ include file="navbar.jsp" %>
-   		<h1> 400 BROKEN </h1>
-   		<h1> PAGE NOT FOUND</h1>
-   </div>
- 
-     <a href="index.do">Home</a>
-     
-</div>
+	<div class="container">
+		<%--Edit the file nav.jsp to change nav links --%>
+		<%@ include file="navbar.jsp"%>
+		<h1>400 BROKEN</h1>
+		<h1>PAGE NOT FOUND</h1>
+	</div>
+
+	<a href="index.do">Home</a>
+
+	</div>
+	<%@ include file="footer.jsp"%>
+	<br>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>

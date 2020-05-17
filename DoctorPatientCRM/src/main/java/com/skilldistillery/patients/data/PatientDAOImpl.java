@@ -73,5 +73,7 @@ public class PatientDAOImpl implements PatientDAO{
 		em.remove(patient);
 		return (em.find(Patient.class, id) == null);
 	}
+
+	
 	
 }

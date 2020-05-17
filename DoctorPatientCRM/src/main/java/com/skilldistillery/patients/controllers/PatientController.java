@@ -23,7 +23,7 @@ public class PatientController {
 		return "index";
 	}
 
-//	@RequestMapping(path= "error.do", method=RequestMethod.GET)
+//	@RequestMapping(path= "error.do")
 //	public String errorPage() {
 //		return "patient/error";
 //	}
@@ -78,6 +78,14 @@ public class PatientController {
 
 		model.addAttribute("patients", patients);
 		return "patient/show";
+	}
+	
+	@RequestMapping(path = "listDoctors.do", method = RequestMethod.GET)
+	public String listOfDoctors(Model model) {
+		List<Patient> patients = dao.listOfAllPatients();
+
+		model.addAttribute("patients", patients);
+		return "patient/showDoctor";
 	}
 
 //////UPDATE/////
