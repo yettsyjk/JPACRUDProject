@@ -16,7 +16,7 @@
 				style="height: 180px">
 				<iframe
 					src="https://maps.google.com/maps?q=denver&t=&z=13&ie=UTF8&iwloc=&output=embed"
-					frameborder="0" style="border: 0" allowfullscreen></iframe>
+					frameborder="0" style="border: 0" allowfullscreen width="700" height="210"></iframe>
 			</div>
 
 			<!-- Card content -->

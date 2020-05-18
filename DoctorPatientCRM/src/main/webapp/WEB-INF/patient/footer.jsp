@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<footer class="page-footer primary-color font-small mdb-color pt-4">
+<footer class="page-footer footer-dark font-small mdb-color pt-4">
 
  
   <div class="container text-center text-md-left">
