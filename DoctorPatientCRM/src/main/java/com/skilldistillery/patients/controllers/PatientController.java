@@ -29,8 +29,7 @@ public class PatientController {
 		return "patient/error";
 	}
 
-	@RequestMapping(path = "getPatient.do", method = RequestMethod.GET) // should pid be String instead of Integer..need
-																		// clarification
+	@RequestMapping(path = "getPatient.do", method = RequestMethod.GET) // should pid be	// clarification
 	public String findPatientDetails(@RequestParam("pid") String pid, Model model) {
 		if (pid.isEmpty()) {
 			return "patient/error";
